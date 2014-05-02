@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<employees>
+	<employee>
+		<email>Anc.d@mail.ru</email>
+		<password>111</password>
+		<user-data firstName="AncD" lastName="Dmitry" role="admin"/>
+	</employee>
+	<employee>
+		<email>Anc.s@mail.ru</email>
+		<password>222</password>
+		<user-data firstName="AncS" lastName="Sergey" role="user"/>
+	</employee>
+	<employee>
+		<email>Pupkin@mail.ru</email>
+		<password>333</password>
+		<user-data firstName="Pupkin" lastName="Vas" role="guest"/>
+	</employee>
+</employees>
