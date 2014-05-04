@@ -1,23 +1,25 @@
 package controllers;
 
 import java.io.IOException;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 /**
- * Servlet implementation class ChangeUserData
+ * Servlet implementation class LogoutController
  */
-@WebServlet("/ChangeUserData")
-public class ChangeUserData extends HttpServlet {
+@WebServlet("/LogoutController")
+public class LogoutController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-       
+	private final String START_PAGE = "StartPage";   
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public ChangeUserData() {
+    public LogoutController() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -35,9 +37,11 @@ public class ChangeUserData extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		performTask(request,response);
 	}
-	
-	protected void performTask(HttpServletRequest req, HttpServletResponse res) {
-		
+	protected void performTask(HttpServletRequest req, HttpServletResponse res) throws IOException {
+		HttpSession session = req.getSession(false);
+        if (session!= null){
+            session.invalidate();
+        }
+        res.sendRedirect(START_PAGE);
 	}
-	
 }

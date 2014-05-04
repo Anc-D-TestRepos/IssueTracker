@@ -71,13 +71,15 @@ public class AuthorizedUser extends HttpServlet {
 			out.print("<style type=\"text/css\">");
 			out.print("body {font-size: 20px;}"
 						+"div.user {font-size: 15px;margin: 0 0 0 10px;}"
-						+"div.user span{font-size: 20px;font-weight: 400;margin: 0 0 0 10px;}"
+						+"span.name{font-size: 20px;font-weight: 500;margin: 0 0 0 10px;}"
+						+"span.logout{font-size: 15px;font-weight: 500;margin: 0 0 0 10px;}"
 						+"div.button {display: table-cell;text-align: left;	padding: 0 25px 0 0;}"
 						+".defectList table {	border: solid 1px;border-spacing: 0px;width: 100%;margin: 40px 0 0 0 ;}"
 						+".defectList table td,th {border-collapse: collapse;height: 25px;border: solid 1px;}");
 			out.print("</style></head>");
 			out.print("<body>");
-			out.print("<div class=\"user\">user: <span>"+employee.getFirstName()+"  "+employee.getLastName()+"</span></div>");
+			out.print("<div class=\"user\">User:<span class=\"name\">"+employee.getFirstName()+"  "+employee.getLastName()+"</span>"
+						+"<span class=\"logout\"><a href=\"LogoutController\">logout</a></span></div>");
 			out.print("<div class=\"chngUserData\">");
 			out.print("</div>");
 			out.print("<hr color=\"red\">");
@@ -96,7 +98,7 @@ public class AuthorizedUser extends HttpServlet {
 						+"<th><a href=\"\">Summary</a></th>");
 				out.print("</tr>");
 			
-				for( int row=0; row <= defectList.size()-1; row++){
+				for( int row = 0; row <= defectList.size() - 1; row++){
 					out.print("<tr>");
 					out.print("<td>" + defectList.get(row).getId() + "</td>");
 					out.print("<td>" + defectList.get(row).getPriority() + "</td>");

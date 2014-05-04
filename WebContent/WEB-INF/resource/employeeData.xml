@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <employees>
 	<employee>
-		<email>Anc.d@mail.ru</email>
+		<email>Abc@mail.ru</email>
 		<password>111</password>
 		<user-data firstName="AncD" lastName="Dmitry" role="admin"/>
 	</employee>
 	<employee>
-		<email>Anc.s@mail.ru</email>
+		<email>Anc@mail.ru</email>
 		<password>222</password>
 		<user-data firstName="AncS" lastName="Sergey" role="user"/>
 	</employee>

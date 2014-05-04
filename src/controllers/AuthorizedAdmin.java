@@ -76,7 +76,8 @@ public class AuthorizedAdmin extends HttpServlet {
 			out.print("<style type=\"text/css\">");
 			out.print("body {font-size: 20px;}"
 						+"div.user {font-size: 15px;margin: 0 0 0 10px;}"
-						+"div.user span{font-size: 20px;font-weight: 400;margin: 0 0 0 10px;}"
+						+"span.name{font-size: 20px;font-weight: 500;margin: 0 0 0 10px;}"
+						+"span.logout{font-size: 15px;font-weight: 500;margin: 0 0 0 10px;}"
 						+"span.chngData,span.chngPass {font-size: 15px;}"
 						+"span.chngData {margin: 10px 0 0 10px;}"
 						+"span.chngPass {margin: 0 0 0 10px;}"
@@ -89,7 +90,8 @@ public class AuthorizedAdmin extends HttpServlet {
 						
 			out.print("</style></head>");
 			out.print("<body>");
-			out.print("<div class=\"user\">Admin: <span>"+employee.getFirstName()+"  "+employee.getLastName()+"</span></div>");
+			out.print("<div class=\"user\">Admin:<span class=\"name\">"+employee.getFirstName()+"  "+employee.getLastName()+"</span>"
+					  +"<span class=\"logout\"><a href=\"LogoutController\">logout</a></span></div>");
 			out.print("<div class=\"chngUserData\">");
 			out.print("<span class=\"chngData\"><a href=\"\">change user data</a></span>");
 			out.print("<span class=\"chngPass\"><a href=\"\">change password</a></span>");
@@ -107,7 +109,7 @@ public class AuthorizedAdmin extends HttpServlet {
 			out.print("<a href=\"\">Types </a>");
 			out.print(" </div>");
 			
-			if ((defectList!=null) & (!defectList.isEmpty())){
+			if ((defectList != null) & (!defectList.isEmpty())){
 				out.print("<div class=\"defectList\">");
 				out.print("<table><tr>");
 				out.print("<th><a href=\"\">Id</a></th>"
@@ -118,7 +120,7 @@ public class AuthorizedAdmin extends HttpServlet {
 						+"<th><a href=\"\">Summary</a></th>");
 				out.print("</tr>");
 			
-				for( int row=0;row<=defectList.size()-1;row++){
+				for( int row = 0; row <= defectList.size()-1; row++){
 					out.print("<tr>");
 					out.print("<td>"+defectList.get(row).getId()+"</td>");
 					out.print("<td>"+defectList.get(row).getPriority()+"</td>");

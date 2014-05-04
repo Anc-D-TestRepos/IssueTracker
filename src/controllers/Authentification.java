@@ -68,7 +68,7 @@ public class Authentification extends HttpServlet {
 		
 		employee = employeeSearcher.findEmployee(email, password);
 		
-		if(employee!=null){
+		if(employee != null){
 			
 			session.setAttribute(EMPLOYEE, employee);
 			

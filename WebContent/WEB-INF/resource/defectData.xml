@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <defects>
 	<defect id="1" priority="Critical" assignee="Abc@mail.ru" type="some text" status="not fixed" summary="some comments"/>
-	<defect id="2" priority="Minor" assignee="Aaa@mail.ru" type="some text" status="not fixed" summary="some comments"/>
+	<defect id="2" priority="Minor" assignee="Abc@mail.ru" type="some text" status="not fixed" summary="some comments"/>
 	<defect id="3" priority="Major" assignee="Anc@mail.ru" type="some text" status="not fixed" summary="some comments"/>
 	<defect id="4" priority="Minor" assignee="Abc@mail.ru" type="some text" status="fixed" summary="some comments"/>
 	<defect id="5" priority="Minor" assignee="Anc@mail.ru" type="some text" status="not fixed" summary="some comments"/>
@@ -14,8 +14,8 @@
 	<defect id="12" priority="Major" assignee="Abc@mail.ru" type="some text" status="not fixed" summary="some comments"/>
 	<defect id="13" priority="Critical" assignee="Abc@mail.ru" type="some text" status="not fixed" summary="some comments"/>
 	<defect id="14" priority="Major" assignee="Abc@mail.ru" type="some text" status="fixed" summary="some comments"/>
-	<defect id="15" priority="Critical" assignee="And@mail.ru" type="some text" status="not fixed" summary="some comments"/>
+	<defect id="15" priority="Critical" assignee="Anc@mail.ru" type="some text" status="not fixed" summary="some comments"/>
 	<defect id="16" priority="Minor" assignee="Anc@mail.ru" type="some text" status="not fixed" summary="some comments"/>
 	<defect id="17" priority="Critical" assignee="Anc@mail.ru" type="some text" status="not fixed" summary="some comments"/>
-	<defect id="18" priority="Minor" assignee="Ivanov@mail.ru" type="some text" status="fixed" summary="some comments"/>
+	<defect id="18" priority="Minor" assignee="Pupkin@mail.ru" type="some text" status="fixed" summary="some comments"/>
 </defects>
